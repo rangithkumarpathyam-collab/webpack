@@ -26,9 +26,7 @@ function isInteractive() {
 	const forced = process.env.WEBPACK_SETUP;
 	if (forced === "interactive") return true;
 	if (forced === "automated") return false;
-	return (
-		Boolean(process.stdin.isTTY && process.stdout.isTTY) &&
-		process.env.CI === undefined
+
 	);
 }
 
